@@ -20,6 +20,12 @@ resource "google_storage_bucket" "static-site" {
     response_header = ["*"]
     max_age_seconds = 3600
   }
+  labels =  {
+    managed-by = "Mariano Victory"
+    project    = "test-mavictory"
+    subject    = "Cloud Computing"
+    created-by = "terraform"
+  }
 }
 
 resource "google_storage_default_object_access_control" "public_rule" {
