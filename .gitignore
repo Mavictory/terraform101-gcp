@@ -1,0 +1,8 @@
+# Terraform files
+.terraform/
+.terraform.*
+terraform.tfstate*
+.terraform*
+
+
+.DS_Store
