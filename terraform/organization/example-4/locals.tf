@@ -1,5 +1,5 @@
 locals {
-  bucket_name = "test-bucket-itba-cloud-computing"
+  bucket_name = "www.mvictory.xyz"
   path        = "../../resources"
 
   gcs = {

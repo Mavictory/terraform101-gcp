@@ -5,7 +5,7 @@
 resource "google_storage_bucket" "this" {
   name          = var.bucket_name
   location      = var.location
-  project       = "test-mavictory"
+  project       = var.project
   force_destroy = true
 
   dynamic "website" {

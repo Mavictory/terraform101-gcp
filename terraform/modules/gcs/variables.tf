@@ -31,3 +31,9 @@ variable "location" {
   type        = string
   default     = "us-central1"
 }
+
+variable "project" {
+  description = "Project where the bucket will be created"
+  type        = string
+  default     = "test-mavictory"
+}
