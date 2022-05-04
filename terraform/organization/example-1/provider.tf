@@ -1,4 +1,4 @@
 provider "google-beta" {
-  project     = "test-mavictory"
-  region      = "us-central1"
+  project = "test-mavictory"
+  region  = "us-central1"
 }

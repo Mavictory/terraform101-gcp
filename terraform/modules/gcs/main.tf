@@ -26,12 +26,12 @@ resource "google_storage_bucket" "this" {
     }
   }
    
-  labels =  {
-    managed-by = "Mariano Victory"
-    project    = "test-mavictory"
-    subject    = "Cloud Computing"
-    created-by = "terraform"
-  }
+  # labels =  {
+  #   managed-by = "Mariano Victory"
+  #   project    = "test-mavictory"
+  #   subject    = "Cloud Computing"
+  #   created-by = "terraform"
+  # }
 }
 # ----------------
 # 2- OBJECT ACL

@@ -20,10 +20,11 @@ resource "google_storage_bucket" "static-site" {
     response_header = ["*"]
     max_age_seconds = 3600
   }
+
   labels =  {
-    managed-by = "Mariano Victory"
+    managed-by = "mariano-victory"
     project    = "test-mavictory"
-    subject    = "Cloud Computing"
+    subject    = "cloud-computing"
     created-by = "terraform"
   }
 }
@@ -43,7 +44,7 @@ resource "google_storage_bucket_object" "html" {
   name   = each.key
   source = "${var.path}/html/${each.key}"
   bucket = google_storage_bucket.static-site.name
-  #depends_on = [google_storage_default_object_access_control.public_rule]
+  depends_on = [google_storage_default_object_access_control.public_rule]
 }
 
 resource "google_storage_bucket_object" "assets" {
@@ -51,5 +52,5 @@ resource "google_storage_bucket_object" "assets" {
   name   = format("resources/%s", each.key)
   source = format("%s/images/%s", var.path, each.key)
   bucket = google_storage_bucket.static-site.name
-  #depends_on = [google_storage_default_object_access_control.public_rule]
+  depends_on = [google_storage_default_object_access_control.public_rule]
 }
